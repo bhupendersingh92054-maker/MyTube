@@ -30,10 +30,6 @@ const PlayVideo = ({ videoId }) => {
       console.error(err);
     }
   };
-  // const fetchchannelData = async ()=>{
-  //   const channelData_url = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`
-  //   await fetch(channelData_url).then(res=>res.json()).then(data=>setchannelData(data.items))
-  // }
 
   const fetchCommentData = async () => {
     try {
