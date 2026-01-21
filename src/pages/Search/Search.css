@@ -1,0 +1,68 @@
+.search-results {
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Search result row */
+.search-card {
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+  color: #0f0f0f;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Card hover effect */
+.search-card:hover {
+  background: #f9f9f9;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Thumbnail */
+.search-card img {
+  width: 360px;
+  height: 202px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #e5e5e5;
+  flex-shrink: 0;
+}
+
+/* Text container */
+.search-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Title */
+.search-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+/* Title hover color */
+.search-card:hover h3 {
+  color: #065fd4;
+}
+
+/* Channel name */
+.search-card p {
+  font-size: 14px;
+  color: #606060;
+  margin: 4px 0;
+}
+
+/* Time */
+.search-card span {
+  font-size: 13px;
+  color: #606060;
+}
