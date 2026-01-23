@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
 import "./PlayVideo.css";
-import video1 from "../../assets/video.mp4";
 import Like from "../../assets/like.png";
 import Dislike from "../../assets/dislike.png";
 import Share from "../../assets/share.png";
 import Save from "../../assets/save.png";
-import Jack from "../../assets/jack.png";
 import User_Profile from "../../assets/user_profile.jpg";
 import { API_KEY, value_converter } from "../../data";
 import moment from "moment";
-import { data } from "react-router";
+import { useEffect, useState } from "react";
 
 const PlayVideo = ({ videoId }) => {
   const [apiData, setapiData] = useState(null);

@@ -1,8 +1,8 @@
 .search-results {
-  padding: 24px 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  
 }
 
 /* Search result row */

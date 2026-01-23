@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
 import "./Feeds.css";
 import { Link } from "react-router";
 import { API_KEY, value_converter } from "../../data";
 import moment from "moment";
+import { useEffect, useState } from "react";
 
 const Feed = ({ Category }) => {
   const [data, setData] = useState([]);

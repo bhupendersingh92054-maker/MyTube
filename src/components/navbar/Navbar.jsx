@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Navbar.css";
 import menu from "../../assets/menu.png";
 import logoo from "../../assets/logoo.png";
@@ -8,9 +7,10 @@ import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
 import { Link, useNavigate } from "react-router";
+import { useState } from "react";
 
 const Navbar = ({ setSidebar }) => {
-  const [searchTerm, setSearchTerm] = useState(""); // ✅ THIS WAS MISSING
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -26,7 +26,7 @@ const Navbar = ({ setSidebar }) => {
           className="menu-icon"
           src={menu}
           alt="menu"
-          onClick={() => setSidebar(prev => !prev)}
+          onClick={() => setSidebar((prev) => !prev)}
         />
         <Link to="/">
           <img className="logo" src={logoo} alt="logo" />
@@ -38,8 +38,8 @@ const Navbar = ({ setSidebar }) => {
           <input
             type="text"
             placeholder="Search..."
-            value={searchTerm}                 // ✅
-            onChange={(e) => setSearchTerm(e.target.value)} // ✅
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           />
           <img src={search} alt="search" onClick={handleSearch} />
@@ -57,4 +57,3 @@ const Navbar = ({ setSidebar }) => {
 };
 
 export default Navbar;
-
