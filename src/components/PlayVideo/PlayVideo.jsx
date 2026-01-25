@@ -45,7 +45,7 @@ const PlayVideo = ({ videoId }) => {
           const url = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${apiData.snippet.channelId}&key=${API_KEY}`;
           const res = await fetch(url);
           const data = await res.json();
-          setchannelData(data.items?.[0] || null); // pick the first channel item
+          setchannelData(data.items?.[0] || null);
         } catch (err) {
           console.error(err);
         }
@@ -65,8 +65,6 @@ const PlayVideo = ({ videoId }) => {
 
   return (
     <div className="play-video">
-      {/* <video src={video1} controls autoPlay muted></video> */}
-      {/* <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
       <iframe
         width="100%"
         height="500"
@@ -83,8 +81,6 @@ const PlayVideo = ({ videoId }) => {
           {value_converter(apiData?.statistics.viewCount)} views •{" "}
           {moment(apiData?.snippet.publishedAt).fromNow()}
         </p>
-
-        {/* <p>1525 views &bull; 2 days ago</p> */}
         <div>
           <span>
             <img src={Like} alt="" />

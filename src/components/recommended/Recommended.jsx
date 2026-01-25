@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+
 import "./Recommended.css";
 import { API_KEY, value_converter } from "../../data";
+import { useEffect, useState } from "react";
 
 const Recommended = ({ categoryId }) => {
   const [apiData, setapiData] = useState([]);
