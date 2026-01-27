@@ -1,44 +1,100 @@
-nav{
-    padding: 10px 2%;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+
+.flex-div {
+  display: flex;
+  align-items: center;
 }
 
-.nav-left .menu-icon{
-    width: 22px;
-    margin-right: 25px;
-}
-.nav-left .logo{
-    width: 130px;
-}
-.nav-middle .search-box{
-    border: 1px solid #ccc;
-    margin-right: 15px;
-    padding: 8px 12px;
-    border-radius: 25px;
-
+/* Navbar main */
+nav {
+  justify-content: space-between;
+  padding: 8px 15px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.nav-middle .search-box input{
-    width: 400px;
-    height: 25px;
-    border: 0;
-    outline: 0;
-    background-color: transparent;
-    font-size: medium;
+/* Left */
+.nav-left .menu-icon {
+  width: 22px;
+  cursor: pointer;
+  margin-right: 15px;
 }
-.nav-middle .search-box img{
-    width: 15px;
+
+.nav-left .logo {
+  width: 120px;
 }
- .nav-right img{
-    width: 25px;
-    margin-right: 25px;
- }
- .nav-right .user-icon{
-    width: 35px;
-    border-radius: 50%;
- }
+
+/* Middle Search */
+.nav-middle {
+  flex: 1;
+  justify-content: center;
+}
+
+.search-box {
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+}
+
+.search-box img {
+  width: 18px;
+  cursor: pointer;
+}
+
+/* Right Icons */
+.nav-right img {
+  width: 22px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 32px;
+  border-radius: 50%;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .search-box {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 8px;
+  }
+
+  .nav-middle {
+    display: none; /* Hide search like YouTube mobile */
+  }
+
+  .nav-right img {
+    width: 18px;
+    margin-left: 10px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .nav-right img:not(.user-icon) {
+    display: none; /* Hide extra icons */
+  }
+}

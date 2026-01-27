@@ -1,10 +1,17 @@
-.container{
-    background: #f9f9f9;
-    padding-left: 17%;
-    padding-right: 2px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.home-page {
+  display: flex;
 }
-.large-container{
-    padding-left: 7%;
+
+/* Sidebar width is 250px, fixed */
+.main-content {
+  margin-left: 250px; /* space for fixed sidebar */
+  flex: 1;
+  padding: 10px;
+}
+
+/* ----------------- MOBILE ----------------- */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* take full width when sidebar hidden */
+  }
 }

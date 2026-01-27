@@ -26,28 +26,28 @@ const Feed = ({ Category }) => {
     fetchData();
   }, [Category]);
 
-  if (loading) {
-    return <p>Loading videos...</p>;
-  }
+  if (loading) return <p>Loading videos...</p>;
 
   return (
     <div className="feed">
       {data.map((item) => (
         <Link
           key={item.id}
-          to={`/video/${item.snippet?.categoryId || 0}/${item.id}`}
+          to={`/video/${item.id}`}
           className="card"
         >
           <img
             src={item.snippet?.thumbnails?.medium?.url || ""}
             alt={item.snippet?.title || ""}
           />
-          <h2>{item.snippet?.title || "No Title"}</h2>
-          <h3>{item.snippet?.channelTitle || "Unknown Channel"}</h3>
-          <p>
-            {value_converter(item.statistics?.viewCount || 0)} views •{" "}
-            {moment(item.snippet?.publishedAt).fromNow()}
-          </p>
+          <div className="card-info">
+            <h2>{item.snippet?.title || "No Title"}</h2>
+            <h3>{item.snippet?.channelTitle || "Unknown Channel"}</h3>
+            <p>
+              {value_converter(item.statistics?.viewCount || 0)} views •{" "}
+              {moment(item.snippet?.publishedAt).fromNow()}
+            </p>
+          </div>
         </Link>
       ))}
     </div>

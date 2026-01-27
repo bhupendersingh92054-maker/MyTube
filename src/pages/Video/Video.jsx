@@ -1,17 +1,16 @@
 import React from "react";
-import "./Video.css";
-import PlayVideo from "../../components/PlayVideo/PlayVideo";
-import Recommended from "../../components/recommended/Recommended";
 import { useParams } from "react-router";
+import PlayVideo from "../../components/PlayVideo/PlayVideo";
+import Recommended from "../../components/Recommended/Recommended";
+import "./Video.css";
 
 const Video = () => {
-  const { videoId, categoryId } = useParams();
-  console.log("videoId:", videoId);
-  console.log("categoryId:", categoryId);
+  const { videoId } = useParams();
+
   return (
     <div className="play-container">
       <PlayVideo videoId={videoId} />
-      <Recommended categoryId={categoryId} />
+      <Recommended />
     </div>
   );
 };
