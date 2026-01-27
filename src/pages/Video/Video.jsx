@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import PlayVideo from "../../components/PlayVideo/PlayVideo";
 import Recommended from "../../components/Recommended/Recommended";
+
 import "./Video.css";
 
 const Video = () => {
