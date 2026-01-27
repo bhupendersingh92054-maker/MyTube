@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import Recommended from "../components/recommended/Recommended";
+import Recommended from "../../components/Recommended/Recommended";
 import PlayVideo from "../components/PlayVideo/PlayVideo";
 
 const SearchPlay = () => {
